@@ -1,8 +1,10 @@
 const Url = require("./database").Url
 const { run_script } = require("./script")
+require("dotenv").config()
 
 
 const workers = {}
+const BACKUP = process.env.BACKUP || "false"
 
 
 async function start_id(id, callback_result, callback_error) {
@@ -33,6 +35,9 @@ async function start_worker(id, callback_result, callback_error) {
         } else {
             let url = urls[0].toString()
             await Url.set_completed(id, url)
+            if (BACKUP == "true") {
+                run_script(`./script/backup.sh ${id}`)
+            }
             callback_result(id, url)
         }
     }

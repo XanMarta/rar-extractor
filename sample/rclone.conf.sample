@@ -2,10 +2,14 @@
 
 
 [FROM]
-...
-// rclone config to download files
+... // config to download files
+
 
 [TO]
-...
+... // config to upload extracted files
 root_folder_id = ...
-// rclone config to upload extracted files
+
+
+[BACKUP]
+... // config to backup files
+root_folder_id = ...
