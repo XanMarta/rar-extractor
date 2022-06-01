@@ -1,0 +1,9 @@
+version: "3.8"
+services:
+  rar:
+    image: xanmarta/rar-extractor
+    ports:
+      - 3000:3000
+    environment:
+      - DB_ENDPOINT=${DB_ENDPOINT}
+      - CONFIG_BASE=${CONFIG_BASE}

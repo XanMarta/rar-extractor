@@ -1,0 +1,11 @@
+// Below is a sample of rclone.conf file. Encrypt it using base64 and set the result to CONFIG_BASE
+
+
+[FROM]
+...
+// rclone config to download files
+
+[TO]
+...
+root_folder_id = ...
+// rclone config to upload extracted files
