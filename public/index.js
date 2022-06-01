@@ -30,7 +30,7 @@ function upload(id) {
         if (id == rid) {
             text_progress.style.display = "none"
             text_result.innerHTML = `Result:
-            <a href="${url}">${url}</a>`
+            <a href="${url}" target="_blank">${url}</a>`
         }
     })
     set_on_invalid((rid) => {

@@ -17,8 +17,8 @@ function _init(db_module) {
 
 db.connect_db = async () => {   // Must be called first
     console.log("Connecting to database ...")
-    db.client = new MongoClient(DB_ENDPOINT)
     try {
+        db.client = new MongoClient(DB_ENDPOINT)
         await db.client.connect()
         console.log("Database connected")
         db.db = db.client.db(DB_NAME)

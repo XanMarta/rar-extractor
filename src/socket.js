@@ -7,7 +7,7 @@ const sockets = []
 function init_socket(io) {
     io.on("connection", (socket) => {
         sockets.push(socket)
-        console.log("Socket connected: " + socket.id)
+        // console.log("Socket connected: " + socket.id)
 
         socket.on("send", async (id) => {
             console.log(`ID: ${id}`)
@@ -15,7 +15,7 @@ function init_socket(io) {
         })
 
         socket.on("disconnect", () => {
-            console.log("Socket disconnected: " + socket.id)
+            // console.log("Socket disconnected: " + socket.id)
             sockets.pop(socket)
         })
     })
