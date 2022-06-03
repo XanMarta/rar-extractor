@@ -3,7 +3,7 @@ FROM node:14-buster-slim
 RUN echo "deb http://deb.debian.org/debian bullseye main contrib non-free" >> /etc/apt/sources.list && \
     echo "deb-src http://deb.debian.org/debian bullseye main contrib non-free" >> /etc/apt/sources.list && \
     apt update -y && \
-    apt install -y unrar curl && \
+    apt install -y unrar curl detox && \
     rm -rf /var/lib/apt/lists
 
 RUN useradd -m -s /bin/bash app && \
