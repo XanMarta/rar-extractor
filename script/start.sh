@@ -10,7 +10,6 @@ mkdir -p ./dist/temp/$1
 ./dist/rclone --config ./dist/rclone.conf backend copyid FROM: $1 ./dist/temp/$1/ || \
     ./dist/rclone --config ./dist/rclone.conf copy --drive-root-folder-id $1 FROM: ./dist/temp/$1
 
-detox -r ./dist/temp/$1/
 find ./dist/temp/$1 -name "*.rar" | xargs -I {} ./script/extract.sh {}
 rm ./dist/temp/$1/*.rar
 
