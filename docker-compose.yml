@@ -5,7 +5,6 @@ services:
     ports:
       - 3000:3000
     environment:
-      - LANG=C.UTF-8
       - DB_ENDPOINT=${DB_ENDPOINT}
       - CONFIG_BASE=${CONFIG_BASE}
       - BACKUP=${BACKUP}
